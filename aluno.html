@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Cadastro de Aluno</title>
+    <link rel="stylesheet" href="aluno.css">
+</head>
+
+<body>
+  <div>
+    <a href="aluno.html" style="color: aliceblue; width: 13%;">Aluno</a> |
+    <a href="professor.html" style="color: white;">Professor</a> |
+    <a href="turma.html" style="color: aliceblue;">Turma</a>
+  </div>
+
+  <h1>Cadastro de Aluno</h1>
+  <form id="aluno-form">
+    <label>Nome: <input type="text" name="nome" required></label><br>
+    <label>Data de Nascimento: <input type="date" name="data_nascimento" required></label><br>
+    <label>Nota 1º Semestre: <input type="number" step="0.01" name="nota_primeiro_semestre" required></label><br>
+    <label>Nota 2º Semestre: <input type="number" step="0.01" name="nota_segundo_semestre" required></label><br>
+    <label>ID da Turma: <input type="number" name="turma_id" required></label><br>
+    <button type="submit">Cadastrar Aluno</button>
+  </form>
+
+  <hr>
+
+  <button id="listar-alunos">Listar Alunos</button>
+  <div id="alunos-lista">
+
+
+  </div>
+
+  <!-- Pop-up para editar aluno -->
+  <div id="edit-popup" style="display:none;">
+    <h2>Editar Aluno</h2>
+    <form id="update-form">
+      <input type="hidden" id="aluno-id">
+      <label>Nome: <input type="text" id="update-nome" required></label><br>
+      <label>Data de Nascimento: <input type="date" id="update-data_nascimento" required></label><br>
+      <label>Nota 1º Semestre: <input type="number" step="0.01" id="update-nota_primeiro_semestre" required></label><br>
+      <label>Nota 2º Semestre: <input type="number" step="0.01" id="update-nota_segundo_semestre" required></label><br>
+      <label>ID da Turma: <input type="number" id="update-turma_id" required></label><br>
+      <button type="submit">Atualizar</button>
+      <button type="button" id="close-popup">Fechar</button>
+    </form>
+  </div>
+
+  <script src="aluno.js"></script>
+</body>
+
+</html>

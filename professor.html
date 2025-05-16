@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Cadastro de Professor</title>
+  <link rel="stylesheet" href="cs.css">
+</head>
+
+<body>
+  <div>
+    <a href="aluno.html" style="color: aliceblue;">Aluno</a> |
+    <a href="professor.html" style="color: white;">Professor</a> |
+    <a href="turma.html" style="color: aliceblue;">Turma</a>
+  </div>
+
+  <h1>Cadastro de Professor</h1>
+
+  <form id="professor-form">
+    <label>Nome: <input type="text" name="nome" required></label><br>
+    <label>Matéria: <input type="text" name="materia" required></label><br>
+    <label>Observação: <input type="text" name="observacao" required></label><br>
+    <label>Idade: <input type="number" name="idade" required></label><br>
+    <button type="submit">Cadastrar Professor</button>
+  </form>
+
+  <hr>
+
+  <button id="listar-professores">Listar Professores</button>
+  <div id="professores-lista"></div>
+
+  <script src="professor.js"></script>
+</body>
+
+</html>

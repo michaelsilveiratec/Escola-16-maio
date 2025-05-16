@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Cadastro de Turma</title>
+  <link rel="stylesheet" href="turma.css">
+</head>
+
+<body>
+  <div>
+    <a href="aluno.html" style="color: aliceblue;">Aluno</a> |
+    <a href="professor.html" style="color: white;">Professor</a> |
+    <a href="turma.html" style="color: aliceblue;">Turma</a>
+  </div>
+
+  <h1>Cadastro de Turma</h1>
+  <form id="turma-form">
+    <label>Nome: <input type="text" name="nome" required></label><br>
+    <label>Matéria: <input type="text" name="materia" required></label><br>
+    <label>Descrição: <input type="text" name="descricao" required></label><br>
+    <label>Ativo:
+      <select name="ativo" required>
+        <option value="true">Sim</option>
+        <option value="false">Não</option>
+      </select>
+    </label><br>
+    <label>ID do Professor: <input type="number" name="professor_id" required></label><br>
+    <button type="submit">Cadastrar Turma</button>
+  </form>
+
+  <hr>
+
+  <button id="listar-turmas">Listar Turmas</button>
+  <div id="turmas-lista"></div>
+
+  <script src="turma.js"></script>
+</body>
+
+</html>
