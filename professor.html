@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -8,7 +7,7 @@
 </head>
 
 <body>
-  <div>
+  <div class="menu-nav">
     <a href="aluno.html" style="color: aliceblue;">Aluno</a> |
     <a href="professor.html" style="color: white;">Professor</a> |
     <a href="turma.html" style="color: aliceblue;">Turma</a>
@@ -16,6 +15,7 @@
 
   <h1>Cadastro de Professor</h1>
 
+  <!-- Formulário de cadastro -->
   <form id="professor-form">
     <label>Nome: <input type="text" name="nome" required></label><br>
     <label>Matéria: <input type="text" name="materia" required></label><br>
@@ -29,7 +29,20 @@
   <button id="listar-professores">Listar Professores</button>
   <div id="professores-lista"></div>
 
+  <!-- 🔥 Pop-up para editar professor -->
+  <div id="edit-popup">
+    <h2>Editar Professor</h2>
+    <form id="update-form">
+      <input type="hidden" id="professor-id">
+      <label>Nome: <input type="text" id="update-nome" required></label><br>
+      <label>Matéria: <input type="text" id="update-materia" required></label><br>
+      <label>Observação: <input type="text" id="update-observacao" required></label><br>
+      <label>Idade: <input type="number" id="update-idade" required></label><br>
+      <button type="submit">Atualizar</button>
+      <button type="button" id="close-popup">Fechar</button>
+    </form>
+  </div>
+
   <script src="professor.js"></script>
 </body>
-
 </html>

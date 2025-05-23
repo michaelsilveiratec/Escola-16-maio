@@ -76,6 +76,7 @@ form#aluno-form input {
     border-radius: 5px;
     background-color: #ec0c7f;
     transition: background 0.2s;
+    margin-left: 16%;
 }
 
 .button:hover, button:hover {
@@ -86,4 +87,164 @@ form#aluno-form input {
     display: block;
     margin: 1px;
     margin-left: -11px;
+}
+
+#edit-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(5, 246, 202, 0.15); /* tom do fundo principal, com transparência */
+    backdrop-filter: blur(10px); /* efeito blur para suavizar o fundo atrás do pop-up */
+    padding: 25px 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(5, 246, 202, 0.5); /* sombra azulada suave */
+    color: #f2ecec; /* texto claro */
+    z-index: 1000;
+    min-width: 320px;
+    max-width: 400px;
+}
+
+#edit-popup h2 {
+    margin-top: 0;
+    font-weight: 600;
+    font-size: 1.6em;
+}
+
+#edit-popup label {
+    display: block;
+    margin: 10px 0 6px;
+    font-weight: 500;
+}
+
+#edit-popup input {
+    width: 100%;
+    padding: 7px 10px;
+    border-radius: 8px;
+    border: none;
+    margin-bottom: 12px;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+
+#edit-popup button {
+    padding: 8px 18px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    background-color: #ec0c7f;
+    color: white;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    margin-right: 8px;
+}
+
+#edit-popup button:hover {
+    background-color: #e00589;
+}
+
+/* Adicione ao final do aluno.css */
+.menu-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    background: rgba(5, 246, 202, 0.10);
+    backdrop-filter: blur(4px);
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 26, 255, 0.10);
+    padding: 18px 0 14px 0;
+    margin: 28px auto 32px auto;
+    width: 100%;
+    max-width: 600px;
+}
+
+.menu-nav a {
+    color: #f2ecec;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 1.1em;
+    padding: 6px 18px;
+    border-radius: 8px;
+    transition: background 0.2s, color 0.2s;
+}
+
+.menu-nav a:hover,
+.menu-nav a.active {
+    background: #ec0c7f;
+    color: #fff;
+}
+
+/* ======== MEDIA QUERIES: RESPONSIVIDADE ======== */
+
+/* Telas pequenas (celulares) */
+@media (max-width: 600px) {
+    .container-principal,
+    .menu-nav,
+    #alunos-lista,
+    #professores-lista,
+    #turmas-lista {
+        max-width: 90%;
+        padding: 20px;
+    }
+
+    form#aluno-form,
+    form#professor-form,
+    form#turma-form {
+        width: 100%;
+    }
+
+    .button,
+    button {
+        width: 100%;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .menu-nav {
+        flex-direction: column;
+        gap: 12px;
+    }
+}
+
+/* Telas médias (tablets) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .container-principal,
+    .menu-nav,
+    #alunos-lista,
+    #professores-lista,
+    #turmas-lista {
+        max-width: 90%;
+    }
+
+    form#aluno-form,
+    form#professor-form,
+    form#turma-form {
+        width: 100%;
+    }
+
+    #listar-alunos{
+        width: 100%;
+        align-content: center;
+        align-items: center;
+    }
+
+    .button, 
+    button {
+        align-content: center;
+        align-items: center;
+        width: 100%;
+        margin: auto;
+    }
+
+    .menu-nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+/* Telas grandes (desktop) */
+@media (min-width: 1025px) {
+    /* Mantém o layout original */
 }

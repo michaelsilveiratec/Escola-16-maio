@@ -7,15 +7,16 @@
 </head>
 
 <body>
-  <div>
+  <div class="menu-nav">
     <a href="aluno.html" style="color: aliceblue;">Aluno</a> |
-    <a href="professor.html" style="color: white;">Professor</a> |
-    <a href="turma.html" style="color: aliceblue;">Turma</a>
+    <a href="professor.html" style="color: aliceblue;">Professor</a> |
+    <a href="turma.html" style="color: white;">Turma</a>
   </div>
 
   <h1>Cadastro de Turma</h1>
+
+  <!-- Formulário para cadastrar uma turma -->
   <form id="turma-form">
-    <label>Nome: <input type="text" name="nome" required></label><br>
     <label>Matéria: <input type="text" name="materia" required></label><br>
     <label>Descrição: <input type="text" name="descricao" required></label><br>
     <label>Ativo:
@@ -33,7 +34,26 @@
   <button id="listar-turmas">Listar Turmas</button>
   <div id="turmas-lista"></div>
 
+  <!-- Pop-up para editar turma -->
+  <div id="edit-popup-turma" style="display:none;">
+    <h2>Editar Turma</h2>
+    <form id="update-form-turma">
+      <input type="hidden" id="turma-id">
+      <label>Matéria: <input type="text" id="update-materia" required></label><br>
+      <label>Descrição: <input type="text" id="update-descricao" required></label><br>
+      <label>Ativo:
+        <select id="update-ativo" required>
+          <option value="true">Sim</option>
+          <option value="false">Não</option>
+        </select>
+      </label><br>
+      <label>ID do Professor: <input type="number" id="update-professor_id" required></label><br>
+      <button type="submit">Atualizar</button>
+      <button type="button" id="close-popup-turma">Fechar</button>
+    </form>
+  </div>
+
   <script src="turma.js"></script>
 </body>
-
 </html>
+
