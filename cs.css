@@ -28,7 +28,7 @@ form#professor-form {
     width: 13%;
     display: flex;
     flex-direction: column;
-    gap: 2px; /* Esse é do Professor */
+    gap: 2px; 
     align-items: flex-start;
 }
 
@@ -36,7 +36,7 @@ form#professor-form label {
     width: 90%;
     text-align: left;
     color: #fff;
-    margin-bottom: 2px; /* espaço abaixo do label -professor */
+    margin-bottom: 1px;
 }
 
 form#professor-form input {
@@ -44,7 +44,7 @@ form#professor-form input {
     padding: 6px 8px;
     border-radius: 5px;
     border: none;
-    margin-bottom: 2px; /* O gap já cuida do espaçamento */
+    margin-bottom: 2px; 
     box-sizing: border-box;
 }
 
@@ -71,12 +71,12 @@ form#professor-form input {
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    margin: 8px 4px;
+    margin: 4px 2px;
     cursor: pointer;
     border-radius: 5px;
     background-color: #ec0c7f;
     transition: background 0.2s;
-    margin-left: 12%;
+    margin-left: -5%;
 }
 
 .button:hover, button:hover {
@@ -88,19 +88,19 @@ form#professor-form input {
     margin: 1px;
     margin-left: -11px;
 }
-/* Pop-up de edição ajustado para combinar com o fundo */
+
 #edit-popup {
     display: none;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: rgba(5, 246, 202, 0.15); /* tom do fundo principal, com transparência */
-    backdrop-filter: blur(10px); /* efeito blur para suavizar o fundo atrás do pop-up */
+    background: rgba(5, 246, 202, 0.15); 
+    backdrop-filter: blur(10px); 
     padding: 25px 30px;
     border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(5, 246, 202, 0.5); /* sombra azulada suave */
-    color: #f2ecec; /* texto claro */
+    box-shadow: 0 8px 20px rgba(5, 246, 202, 0.5); 
+    color: #f2ecec; 
     z-index: 1000;
     min-width: 320px;
     max-width: 400px;
@@ -144,7 +144,7 @@ form#professor-form input {
     background-color: #e00589;
 }
 
-/* Adicione ao final do aluno.css */
+
 .menu-nav {
     display: flex;
     justify-content: center;
@@ -177,9 +177,8 @@ form#professor-form input {
 }
 
 
-/* ======== MEDIA QUERIES: RESPONSIVIDADE ======== */
 
-/* Telas pequenas (celulares) */
+
 @media (max-width: 600px) {
     .container-principal,
     .menu-nav,
@@ -215,7 +214,7 @@ form#professor-form input {
     }
 }
 
-/* Telas médias (tablets) */
+
 @media (min-width: 601px) and (max-width: 1024px) {
     .container-principal,
     .menu-nav,
@@ -243,7 +242,7 @@ form#professor-form input {
     }
 }
 
-/* Telas grandes (desktop) */
+
 @media (min-width: 1025px) {
-    /* Mantém o layout original */
+    
 }
